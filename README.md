@@ -1,19 +1,21 @@
 # Rails Girls Guides
 
-Our aim is to give tools for women to understand technology. The Rails Girls events do this by providing a great first experience on building the Internet.
+This repository is providing german translations for some of the [Rails Girls Guides](http://guides.railsgirls.com). You can view the german translations on http://railsgirlshh.github.io.
 
-Rails Girls was founded in end of 2010 in Helsinki. Originally intended as a onetime event, we never thought to see so many local chapters all around the world! This guide has been put together to help you get started.
+These translations were started by [Rails Girls Hamburg](http://railsgirls.com/hamburg).
 
-You can use our materials and instructions to roll out your own workshop in your city, workplace or kitchen! Read more about Rails Girls at http://railsgirls.com
+We aim to keep this translation as close to the original as possible. If you have suggestions to improve the guides or want to contribute a new guide, please do so by providing a pull request to the [original guides](https://github.com/railsgirls/railsgirls.github.com). 
+
+If you would like to help with the german translation, we're happy to receive your pull requests (see below). You can email to railsgirlshh@gmail.com or contact [@railsgirlshh](https://twitter.com/railsgirlshh) on twitter if you have questions.
 
 ## Quick start
 
-View the guides at http://guides.railsgirls.com or clone this repo and install & run [jekyll](https://github.com/mojombo/jekyll)
+Clone this repo and install & run [jekyll](https://github.com/mojombo/jekyll)
 
 ### Installing jekyll
 
 ```
-$ cd railsgirls.github.com
+$ cd railsgirlshh.github.com
 ```
 
 ```
@@ -41,23 +43,27 @@ $ bundle exec jekyll serve --watch
 
 You might find some useful hints in this jekyll issue if it's not working as expected: [Issue 503](https://github.com/mojombo/jekyll/issues/503)
 
-## Contributing a Guide
+### Branches
+* branch `master` is deployed to http://railsgirlshh.github.io
+* branch `upstream` is kept in sync with the `master` branch of the [original guides](https://github.com/railsgirls/railsgirls.github.com)
 
-To contribute a guide, view the instructions at http://guides.railsgirls.com/contributing
+#### Import and translate updates from the original guides
+* update the `upstream` branch to the latest version of the original guides
+* merge `upstream` into `master`
+* solve merge conflicts by providing the proper german translation
 
-## Twitter
+## Pull Requests
+* if you want to submit several unrelated changes, please create different pull requests (e.g. one for fixing typos in the installation guide and another one for translating the additional guide xyz).
+* fork this repository and branch from `master`
+* before sending the pull request, we kindly ask you to squash your commits and rebase your feature branch to the top of `master`
 
-For updates and more follow [@railsgirls](https://twitter.com/railsgirls)
+You can email to railsgirlshh@gmail.com or contact [@railsgirlshh](https://twitter.com/railsgirlshh) on twitter if you have questions or need help with preparing the pull request.
 
 ## Website & Blog
 
 Official website and blog for Rails Girls movement can be found at http://railsgirls.com
 
-## E-mail list
-
-Global mailing list for Rails Girls events at http://groups.google.com/group/rails-girls-team
-
-## Credits
+## Credits for the original guides
 
 * Karri Saarinen / [@karrisaarinen](https://twitter.com/karrisaarinen) / [github](http://github.com/ksaa)
 * Linda Liukas / [@lindaliukas](https://twitter.com/lindaliukas) / [github](http://github.com/lindaliukas)
