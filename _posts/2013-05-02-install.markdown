@@ -1,25 +1,27 @@
 ---
 layout: default
-title: Setup recipe for Rails Girls
+title: Installationsanleitung für Rails Girls
 permalink: install
 ---
 
-# Setup recipe for Rails Girls
-<span class="muted">Cooking time: 5min active / 15-30min passive</span>
+# Installationsanleitung für Rails Girls
+<span class="muted">Dauer: 5min aktiv / 15-30min passiv</span>
 
-To build apps and other things with Ruby on Rails, we need to setup some software and the developer environment for your computer.
+Um Anwendungen und andere Dinge mit Ruby on Rails zu bauen, müssen wir zuerst etwas Software und eine Entwicklungsumgebung einrichten.
 
-Follow the instructions for your operating system. If you run into any problems, don&#8217;t panic. Inform us at the event and we can solve it together.
+Folge den Anleitungen für Dein Betriebssystem. Falls dabei Probleme auftreten sollten, keine Sorge, gib uns einfach bei der Veranstaltung Bescheid und wir lösen sie gemeinsam.
 
-* [Setup for OS X](#setup-for-os-x)
-* [Setup for Windows](#setup-for-windows)
-* [Setup for Linux](#setup-for-linux)
-* [Alternative Installment for all OS](#virtual-machine)
-* [Using a Cloud Service - No Installation Required](#using-a-cloud-service)
+* [OS X](#os-x)
+* [Windows](#windows)
+* [Linux](#linux)
+* [Alternative Installation für alle Betriebssysteme](#virtuelle-maschine)
+* [Einen Cloudservice verwenden - Keine Installation notwendig](#cloudservice)
 
 <hr />
 
-## Setup for OS X
+## OS X
+
+Die Installationsanleitung für OS X ist derzeit noch nicht auf Deutsch verfügbar.
 
 ### *1.* Let&#8217;s check the version of the operating system.
 
@@ -122,7 +124,9 @@ Now you should have a working Ruby on Rails programming setup. Congrats!
 
 <hr />
 
-## Setup for Windows
+## Windows
+
+Die Installationsanleitung für Windows ist derzeit noch nicht auf Deutsch verfügbar.
 
 ### *1.* Install Rails
 
@@ -169,7 +173,9 @@ Open [whatbrowser.org](http://whatbrowser.org) and update your browser if you do
 
 <hr />
 
-## Setup for Linux
+## Linux
+
+Die Installationsanleitung für Linux ist derzeit noch nicht auf Deutsch verfügbar.
 
 ### *1.* Install Rails
 
@@ -217,43 +223,43 @@ Now you should have a working Ruby on Rails programming setup. Congrats!
 
 <hr />
 
-## Virtual Machine
+## Virtuelle Maschine
 
-Instead of installing all tools on your machine, you can also set up a development environment in a Virtual Machine. Please find all the details [here]({% post_url 2014-03-24-alternative-dev-environment %}).
+Anstatt alles direkt auf Deinem Rechner zu installieren, kannst Du auch eine Entwicklungsumgebung in einer virtuellen Maschine einrichten. Details dazu findest du [hier]({% post_url 2014-03-24-alternative-dev-environment %}) (auf Englisch).
 
 <hr />
 
-## Using a Cloud Service
+## Cloudservice
 
-Instead of installing Ruby on Rails and an editor on your computer, you can use a webservice for development. All you need is a browser and an internet connection. This guide explains how to get started with [nitrous.io](https://nitrous.io). If you're using a different service, they may use a different wording - e.g. 'workspace' instead of 'box', but the process is usually pretty similar.
+Anstatt Ruby on Rails und einen Texteditor auf Deinem Computer zu installieren, kannst Du zum Entwickeln auch einen Webdienst / Cloudservice verwenden. Alles was Du brauchst ist ein Browser und eine Internetverbindung. Diese Anleitung beschreibt, wie Du den Cloudservice [nitrous.io](https://nitrous.io) einrichtest. Wenn Du einen anderen Cloudservice benutzt, werden dort unter Umständen andere Begriffe verwendet, z.B. 'Workspace' statt 'Box', aber der generelle Ablauf ist normalerweise ähnlich.
 
-### *1.* Update your browser
+### *1.* Aktualisiere Deinen Browser
 
-If you use Internet Explorer, we recommend installing [Firefox](mozilla.org/firefox) or [Google Chrome](google.com/chrome).
+Wenn Du den Internet Explorer verwendest, empfehlen wir stattdessen die Installation von [Firefox](mozilla.org/firefox) oder [Google Chrome](google.com/chrome).
 
-Open [whatbrowser.org](http://whatbrowser.org) and update your browser if you don't have the latest version.
+Öffne [whatbrowser.org](http://whatbrowser.org) und aktualisiere Deinen Browser, falls Du nicht die neueste Version hast.
 
-### *2.* Create a free account
-Go to [https://nitrous.io](https://nitrous.io/) and signup for free.
+### *2.* Lege einen kostenlosen Account an
+Gehe zu [https://nitrous.io](https://nitrous.io/) und registriere Dich kostenlos ('Sign Up for Free').
 
-### *3.* Setup a development box / workspace for ruby on rails
-* Login to your nitrous account
-* Go to the dashboard by using the green 'Open dashboard' button
-* Create a nitrous box: pick Ruby/Rails from the templates - everything else can stay as is, but you can change the name of your box if you want to
-* It takes a moment until your box is ready 
+### *3.* Richte eine Entwicklungsbox / einen Workspace für Ruby on Rails ein
+* Melde Dich an Deinem nitrous Account an
+* Gehe zum Dashboard, in dem Du den grünen 'Open dashboard' Button anklickst
+* Lege eine nitrous Box an: wähle Ruby/Rails als Template aus, alles andere kann so bleiben - Du kannst den Namen Deiner Box ändern, wenn Du möchtest
+* Es dauert einen Moment, bis Deine Box fertig ist
 
-### *4.* Find and restart your development box
-* If you've just created your box, you can probably skip these steps - they're good to know if you login to nitrous again later
-* You can always find your nitrous boxes by going to the dashboard or choosing 'Boxes' from the top menu
-* Pick your box from the list of boxes
-* If you haven't used a box in a while, it might have been shutdown due to inactivity. If you are informed that your box is not running, restart it using the respective button
-* When your box is up and running, choose 'IDE' in order to start coding
+### *4.* Finde Deine Entwicklungsbox und starte sie neu
+* Falls Du Deine Box soeben neu angelegt hast, kannst Du diese Schritte wahrscheinlich überspringen - Du brauchst sie aber ggf., wenn Du Dich später erneut bei nitrous einloggst
+* Du findest Deine nitrous Boxen, indem Du entweder ins Dashboard gehst oder aus dem oberen Menu 'Boxes' auswählst
+* Wähle Deine Box aus der Liste der Boxen
+* Wenn Du Deine Box eine Weile nicht benutzt hast, wurde sie eventuell heruntergefahren. Wenn Du angezeigt bekommst, dass Deine Box nicht läuft, kannst Du sie mit dem entsprechenden Button neu starten
+* Wenn Deine Box läuft, wähle 'IDE' um mit dem Programmieren zu beginnen
 
-### *5.* Coding with your development box
-* On the left hand side, you find a file browser where you can navigate your directories and file
-* In the middle, you find the editor where you can modify your files
-* At the bottom, you find the terminal where you can run commands
-* Everything you need is here in you browser window - you do not need to start an editor or terminal anywhere else
-* If your following a guide or tutorial, use the commands for Linux even if you are on a Windows computer - your operating system does not matter, since all commands are run on your development box, which is a Linux machine
-* If a guide or tutorial asks you to point your browser to something like http://localhost:3000, go to the 'Preview' menu and pick 'Port 3000'
-* If, for example, you're asked to open http://localhost:3000/posts, please append '/posts' manually to the URL that has been opened
+### *5.* Mit der Entwicklungsbox programmieren
+* Auf der linken Seite hast Du einen Dateibrowser, dort kannst Du durch Deine Verzeichnisse und Dateien navigieren
+* In der Mitte ist der Texteditor, mit dem Du Deine Dateien verändern kannst
+* Unten findest Du das Terminal, in dem Du Befehle ausführen kannst
+* Alles was Du brauchst befindet sich im Browser - Du musst nirgendwo sonst einen Texteditor oder ein Terminal starten
+* Wenn Du ein Tutorial oder eine Anleitung befolgst, verwende die Befehle für Linux, selbst wenn Du einen Windowscomputer benutzt - Dein Betriebssystem spielt keine Rolle, da die Befehle auf der Entwicklungsbox ausgeführt werden, und dort läuft Linux
+* Wenn eine Anleitung oder ein Tutorial Dich auffordern, im Browser etwas wie http://localhost:3000 zu öffnen, gehe stattdessen ins 'Preview' Menu und wähle 'Port 3000'
+* Falls Du z.B. http://localhost:3000/posts aufrufem sollst, hänge '/posts' and die geöffnete Vorschau-URL an
