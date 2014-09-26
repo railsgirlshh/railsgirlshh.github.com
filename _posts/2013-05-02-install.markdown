@@ -67,7 +67,7 @@ xcode-select --install
 #### *3b2.* Install [Homebrew](http://brew.sh/):
 
 {% highlight sh %}
-ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 {% endhighlight %}
 
 #### *3b3.* Install [rbenv](https://github.com/sstephenson/rbenv):
@@ -130,7 +130,7 @@ Die Installationsanleitung f√ºr Windows ist derzeit noch nicht auf Deutsch verf√
 
 ### *1.* Install Rails
 
-Download [RailsInstaller](https://github.com/railsinstaller/railsinstaller-windows/releases/download/2.2.2/railsinstaller-2.2.2.exe) and run it. Click through the installer using the default options.
+Download [RailsInstaller](https://github.com/railsinstaller/railsinstaller-windows/releases/download/3.0.0-alpha.2/railsinstaller-3.0.0.exe) and run it. Click through the installer using the default options.
 
 Open `Command Prompt with Ruby on Rails` and run the following command:
 
