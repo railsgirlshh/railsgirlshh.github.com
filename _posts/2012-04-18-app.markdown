@@ -293,6 +293,8 @@ gem 'carrierwave'
 
 **Coach:** Erläutere, was Bibliotheken sind und warum sie nützlich sind. Erkläre was Open Source Software ist.
 
+Gib nun `STRG-C` im Terminal ein, um den Server anzuhalten.
+
 Führe folgenden Befehl im Terminal aus:
 
 {% highlight sh %}
@@ -305,9 +307,9 @@ Jetzt können wir den Code zum Hochladen von Dateien erzeugen. Führe folgendes 
 rails generate uploader Picture
 {% endhighlight %}
 
-Du musst nun den Railsserver neu starten.
+Bitte starte nun den Railsserver.
 
-Gib `STRG-C` ins Terminal ein, um den Railsserver zu beenden. Wenn er angehalten wurde, kannst Du mit der Cursortaste (Pfeil nach oben) den zuletzt eingegebenen Befehl zurückholen und mit Enter ausführen, um den Server erneut zu starten.
+Achtung: Manche Leute verwenden ein zweites Terminal, und den Railsserver dauerhaft laufen zu lassen. In diesem Fall solltest Du nun den Railsserver beenden und neu starten.
 
 Dies ist notwendig, damit die Anwendung die neu hinzugefügte Bibliothek lädt.
 
