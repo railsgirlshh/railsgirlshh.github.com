@@ -65,7 +65,7 @@ source ~/.bash_profile
 You can find the newest version of Ruby with the command "rbenv install -l".
 
 {% highlight sh %}
-rbenv install 2.2.0
+rbenv install 2.2.3
 {% endhighlight %}
 
 If you got "OpenSSL::SSL::SSLError: ... : certificate verify failed" error, try it this way.
@@ -78,7 +78,7 @@ cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts Op
 #### *3a5.* Set default Ruby:
 
 {% highlight sh %}
-rbenv global 2.2.0
+rbenv global 2.2.3
 {% endhighlight %}
 
 #### *3a6.* Install rails:
@@ -220,6 +220,21 @@ If you use Internet Explorer, we recommend installing [Firefox](mozilla.org/fire
 
 Open [whatbrowser.org](http://whatbrowser.org) and update your browser if you don't have the latest version.
 
+### *4.* Install node
+
+This is not strictly necessary, but it avoids a problem with and ExecJS::RuntimeError that might
+occur later  ([see stackoverflow](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial)).
+
+* Go to [https://nodejs.org/](https://nodejs.org/) and install node
+
+Check your version of node
+
+{% highlight sh %}
+node --version
+{% endhighlight %}
+
+Make sure it is higher than `0.12`. 
+
 <hr />
 
 ## Linux
@@ -282,6 +297,13 @@ Anstatt alles direkt auf Deinem Rechner zu installieren, kannst Du auch eine Ent
 
 Anstatt Ruby on Rails und einen Texteditor auf Deinem Computer zu installieren, kannst Du zum Entwickeln auch einen Webdienst / Cloudservice verwenden. Alles was Du brauchst ist ein Browser und eine Internetverbindung. Diese Anleitung beschreibt, wie Du den Cloudservice [nitrous.io](https://nitrous.io) einrichtest. Wenn Du einen anderen Cloudservice benutzt, werden dort unter Umständen andere Begriffe verwendet, z.B. 'Workspace' statt 'Box', aber der generelle Ablauf ist normalerweise ähnlich.
 
+**Organizer:** Nitrous ist ein kostenpflichtiger Dienste, der für Communityzwecke kostenfreie Accounts bereitstellt. Bitte wendet Euch an Nitrous <pro [at] nitrous.io>, um kostenfreien Zugang zu erhalten. Dafür werden folgende Infos benötigt:
+
+- Emailadressen der Personen, die nitrous Arbeitsbereiche benötigen
+- Wie lange sie nitrous benutzen werden
+- Ab wann Ihr Zugriff braucht (Datum, Uhrzeit)
+- Für wie lange (Tage, Wochen) Ihr Zugriff braucht
+
 ### *1.* Aktualisiere Deinen Browser
 
 Wenn Du den Internet Explorer verwendest, empfehlen wir stattdessen die Installation von [Firefox](mozilla.org/firefox) oder [Google Chrome](google.com/chrome).
@@ -304,6 +326,7 @@ Gehe zu [https://nitrous.io](https://nitrous.io/) und registriere Dich kostenlos
 * Wenn Du Deine Box eine Weile nicht benutzt hast, wurde sie eventuell heruntergefahren. Wenn Du angezeigt bekommst, dass Deine Box nicht läuft, kannst Du sie mit dem entsprechenden Button neu starten
 * Wenn Deine Box läuft, wähle 'IDE' um mit dem Programmieren zu beginnen
 
+<<<<<<< HEAD
 ### *5.* Mit der Entwicklungsbox programmieren
 * Auf der linken Seite hast Du einen Dateibrowser, dort kannst Du durch Deine Verzeichnisse und Dateien navigieren
 * In der Mitte ist der Texteditor, mit dem Du Deine Dateien verändern kannst
@@ -312,3 +335,30 @@ Gehe zu [https://nitrous.io](https://nitrous.io/) und registriere Dich kostenlos
 * Wenn Du ein Tutorial oder eine Anleitung befolgst, verwende die Befehle für Linux, selbst wenn Du einen Windowscomputer benutzt - Dein Betriebssystem spielt keine Rolle, da die Befehle auf der Entwicklungsbox ausgeführt werden, und dort läuft Linux
 * Wenn eine Anleitung oder ein Tutorial Dich auffordern, im Browser etwas wie http://localhost:3000 zu öffnen, gehe stattdessen ins 'Preview' Menu und wähle 'Port 3000'
 * Falls Du z.B. http://localhost:3000/posts aufrufem sollst, hänge '/posts' and die geöffnete Vorschau-URL an
+=======
+### *2.* Create an account
+
+Go to [https://nitrous.io](https://nitrous.io/) and signup.
+
+### *3.* Setup a development box / workspace for ruby on rails
+* Login to your nitrous account
+* Go to the dashboard by using the green 'Open dashboard' button
+* Create a nitrous box: pick Ruby/Rails from the templates - everything else can stay as is, but you can change the name of your box if you want to
+* It takes a moment until your box is ready
+
+### *4.* Find and restart your development box
+* If you've just created your box, you can probably skip these steps - they're good to know if you login to nitrous again later
+* You can always find your nitrous boxes by going to the dashboard or choosing 'Boxes' from the top menu
+* Pick your box from the list of boxes
+* If you haven't used a box in a while, it might have been shutdown due to inactivity. If you are informed that your box is not running, restart it using the respective button
+* When your box is up and running, choose 'IDE' in order to start coding
+
+### *5.* Coding with your development box
+* On the left hand side, you find a file browser where you can navigate your directories and file
+* In the middle, you find the editor where you can modify your files
+* At the bottom, you find the terminal where you can run commands
+* Everything you need is here in you browser window - you do not need to start an editor or terminal anywhere else
+* If your following a guide or tutorial, use the commands for Linux even if you are on a Windows computer - your operating system does not matter, since all commands are run on your development box, which is a Linux machine
+* If a guide or tutorial asks you to point your browser to something like http://localhost:3000, go to the 'Preview' menu and pick 'Port 3000'
+* If, for example, you're asked to open http://localhost:3000/posts, please append '/posts' manually to the URL that has been opened
+>>>>>>> upstream
