@@ -153,7 +153,7 @@ $
 
 Wenn die Eingabeaufforderung nicht zu sehen ist, kannst Du keine Befehle ausführen. Befehle wie `cd` werden nicht funktionieren. Du kannst aber zur Eingabeaufforderung zurückkehren:
 
-Gib `STRG-C` im Terminal ein, um den Railsserver zu beenden.
+Gib <kbd>Strg</kbd>+<kbd>C</kbd> im Terminal ein, um den Railsserver zu beenden.
 
 **Coach:** Erläutere die einzelnen Befehle. Was wurde erzeugt? Was macht der Server?
 
@@ -189,7 +189,7 @@ rails server
 
 Klick ein wenig herum, um Deine Anwendung zu testen.
 
-Gib anschliessend `STRG-C` ins Terminal ein, um den Railsserver zu beenden.
+Gib anschliessend <kbd>Strg</kbd>+<kbd>C</kbd> ins Terminal ein, um den Railsserver zu beenden.
 
 
 ## *3.*Design
@@ -293,7 +293,7 @@ gem 'carrierwave'
 
 **Coach:** Erläutere, was Bibliotheken sind und warum sie nützlich sind. Erkläre was Open Source Software ist.
 
-Gib nun `STRG-C` im Terminal ein, um den Server anzuhalten.
+Gib nun <kbd>Strg</kbd>+<kbd>C</kbd> im Terminal ein, um den Server anzuhalten.
 
 Führe folgenden Befehl im Terminal aus:
 
@@ -423,5 +423,5 @@ Du kannst nun `app/views/pages/info.html.erb` im Texteditor öffnen und Informat
 * Guide 5: [Add Authentication (user accounts) with Devise by Piotr Steininger](/devise/)
 * Guide 6: [Adding profile pictures with Gravatar](/gravatar)
 * Guide 7: [Test your app with RSpec](/testing-rspec)
-* Guide 8: [Continuous Deployment with Travis-CI](/continuous-travis) / [Continuous Deployment with Codeship](/continuous)
+* Guide 8: [Continuous Deployment with Travis-CI](/continuous-travis) / [Continuous Deployment with Codeship](/continuous) / [Continuous Deployment with Snap CI](/continuous-snap-ci)
 * Guide 9: [Go through additional explanations for the App by Lucy Bain](https://github.com/lbain/railsgirls)
