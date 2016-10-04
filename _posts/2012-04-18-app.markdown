@@ -169,28 +169,14 @@ rails generate scaffold idea name:string description:text picture:string
 
 Der Scaffold erzeugt neue Dateien in Deinem Projektverzeichnis, aber damit alles korrekt funktioniert, ist die Ausführung weiterer Befehle erforderlich - um die Datenbank zu aktualisieren und den Railsserver neu zu starten.
 
-<div class="os-specific">
-  <div class="nix">
 {% highlight sh %}
-bin/rake db:migrate
+rake db:migrate
 rails server
 {% endhighlight %}
-  </div>
-
-  <div class="win">
-{% highlight sh %}
-ruby bin/rake db:migrate
-rails server
-{% endhighlight %}
-  </div>
-</div>
 
 Öffne <http://localhost:3000/ideas> in Deinem Browser. Wenn Du einen Cloudservice (z.B. nitrous) verwendest, hänge stattdessen '/ideas' an die Vorschau-URL an (siehe [Installationsanleitung](/install#using-a-cloud-service)).
 
 Klick ein wenig herum, um Deine Anwendung zu testen.
-
-Gib anschliessend <kbd>Strg</kbd>+<kbd>C</kbd> ins Terminal ein, um den Railsserver zu beenden.
-
 
 ## *3.*Design
 
@@ -201,14 +187,14 @@ Die Anwendung sieht noch nicht sehr gut aus. Das können wir ändern! Wir benutz
 Öffne `app/views/layouts/application.html.erb` in Deinem Texteditor, und oberhalb von
 
 {% highlight erb %}
-<%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 {% endhighlight %}
 
 füge
 
 {% highlight erb %}
-<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap.css">
-<link rel="stylesheet" href="//railsgirls.com/assets/bootstrap-theme.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css">
 {% endhighlight %}
 
 hinzu und ersetze
@@ -253,10 +239,10 @@ Vor `</body>` solltest Du folgendes ergänzen:
 {% highlight html %}
 <footer>
   <div class="container">
-    Rails Girls 2015
+    Rails Girls 2016
   </div>
 </footer>
-<script src="//railsgirls.com/assets/bootstrap.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.js"></script>
 {% endhighlight %}
 
 Jetzt können wir auch das Aussehen der Ideentabelle ändern. Öffne `app/assets/stylesheets/application.css` und füge folgendes am Ende hinzu:
@@ -315,7 +301,7 @@ Dies ist notwendig, damit die Anwendung die neu hinzugefügte Bibliothek lädt.
 Öffne `app/models/idea.rb` und unterhalb der Zeile
 
 {% highlight ruby %}
-class Idea < ActiveRecord::Base
+class Idea < ApplicationRecord
 {% endhighlight %}
 
 ergänze
@@ -341,13 +327,13 @@ Unter Umständen bekommst Du eine Fehlermeldung wie *TypeError: can't cast Actio
 In dem Fall solltest Du in der Datei `app/views/ideas/_form.html.erb` die Zeile
 
 {% highlight erb %}
-<%= form_for(@idea) do |f| %>
+<%= form_for(idea) do |f| %>
 {% endhighlight %}
 
 in
 
 {% highlight erb %}
-<%= form_for @idea, :html => {:multipart => true} do |f| %>
+<%= form_for(idea, html: {multipart: true}) do |f| %>
 {% endhighlight %}
 
 ändern.
@@ -363,7 +349,7 @@ Um dies zu ändern, öffne `app/views/ideas/show.html.erb` und ändere
 in
 
 {% highlight erb %}
-<%= image_tag(@idea.picture_url, :width => 600) if @idea.picture.present? %>
+<%= image_tag(@idea.picture_url, width: 600) if @idea.picture.present? %>
 {% endhighlight %}
 
 Aktualisiere die Ansicht im Browser, um die Änderungen zu sehen.
@@ -378,16 +364,14 @@ Aktualisiere die Ansicht im Browser, um die Änderungen zu sehen.
 Öffne `config/routes.rb` und füge nach der ersten Zeile folgendes ein:
 
 {% highlight ruby %}
-root :to => redirect('/ideas')
+root to: redirect('/ideas')
 {% endhighlight %}
 
 Teste die Änderungen, in dem Du  <http://localhost:3000/> bzw. Deine Vorschau-URL im Browser öffnest.
 
 **Coach:** Sprich über Routen, ihre Reihenfolge und die Beziehung zu statischen Dateien.
 
-**Rails 3:** Damit dies funktioniert, musst Du die Datei index.html aus dem Verzeichnis `/public/` entfernen.
-
-## Lege eine statische Seite in Deiner Anwendung an
+## Create static page in your app
 
 Lass uns eine statische Seite anlegen, die Informationen über die Verfasserin der Anwendung bereitstellt - also über Dich!
 
@@ -415,7 +399,7 @@ Du kannst nun `app/views/pages/info.html.erb` im Texteditor öffnen und Informat
 
 ## Weitere Anleitungen (auf Englisch)
 
-* Guide 0: [Handy cheatsheet for Ruby, Rails, console etc.](https://github.com/PragTob/rails-beginner-cheatsheet)
+* Guide 0: [Handy cheatsheet for Ruby, Rails, console etc.](http://www.pragtob.info/rails-beginner-cheatsheet/)
 * Guide 1: [Add commenting by Janika Liiv](/commenting)
 * Guide 2: [Put your app online with Heroku by Terence Lee](/heroku) / [Put your app online with OpenShift by Katie Miller](/openshift) / [Put your app online with anynines](/anynines) / [Put your app online with Trucker.io](/trucker)
 * Guide 3: [Create thumbnail images for the uploads by Miha Filej](/thumbnails)
@@ -425,3 +409,4 @@ Du kannst nun `app/views/pages/info.html.erb` im Texteditor öffnen und Informat
 * Guide 7: [Test your app with RSpec](/testing-rspec)
 * Guide 8: [Continuous Deployment with Travis-CI](/continuous-travis) / [Continuous Deployment with Codeship](/continuous) / [Continuous Deployment with Snap CI](/continuous-snap-ci)
 * Guide 9: [Go through additional explanations for the App by Lucy Bain](https://github.com/lbain/railsgirls)
+* Guide 10: [Adding a back-end with Active Admin](/backend-with-active-admin)
