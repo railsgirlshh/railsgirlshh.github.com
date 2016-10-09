@@ -50,7 +50,7 @@ Dazu öffnen wir das Terminal:
 * Mac OS X: Öffne Spotlight, tippe *Terminal* ein und klick die Anwendung *Terminal* an.
 * Windows: Klick auf Start und halte nach *Eingabeaufforderung* Ausschau, dann klick *Eingabeaufforderung mit Ruby on Rails* bzw. *Command Prompt with Ruby on Rails* an.
 * Linux (Ubuntu/Fedora): Suche im Dash nach *Terminal* und klick *Terminal* an.
-* Cloudservice (z.B. nitrous): Melde Dich an Deinem Account an, starte Deine Box und wechsel in die Entwicklungsumgebung IDE (siehe [Installationsanleitung](/install#using-a-cloud-service)). Das Terminal befindet sich normalerweise im unteren Bereich des Browserfensters.
+* Cloudservice (z.B. nitrous): Melde Dich an Deinem Account an, starte Dein Projekt und wechsel in die Entwicklungsumgebung IDE (siehe [Installationsanleitung](/install#using-a-cloud-service)). Das Terminal befindet sich normalerweise im unteren Bereich des Browserfensters.
 
 Gib jetzt folgende Befehle in das Terminal ein:
 
