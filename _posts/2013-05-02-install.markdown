@@ -78,11 +78,6 @@ In der "New Workspace" Ansicht müssen nun ein paar Einstellungen vorgenommen we
 * Falls Du z.B. http://localhost:3000/posts aufrufem sollst, hänge '/posts' and die soebene erfahrene URL
 
 
-#### Wichtig: Hinweise für das App Tutorial
-
-gem 'therubyracer'
-
-
 <hr />
 
 
