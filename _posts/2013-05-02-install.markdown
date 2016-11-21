@@ -67,8 +67,16 @@ In der "New Workspace" Ansicht müssen nun ein paar Einstellungen vorgenommen we
   * Öffne in Codenvy die "Operations perspective", gehe dort auf den "Servers" Tab und merke dir dort den "Server Adress" Eintrag in der Zeile "Server-3000-tcp". Rufe statt http://localhost:3000 diese URL in Deinem Browser auf.
   * Falls Du z.B. http://localhost:3000/posts aufrufen sollst, hänge '/posts' and die soebene erfahrene URL
 
-<hr />
+#### Troubleshooting
 
+<p>Wenn Du den Fehler "Gem Load Error is: Could not find a JavaScript runtime" erhältst, musst Du folgendes in die zweite Zeile der Datei `Gemfile` eintragen und anschließend den Befehl "bundle" im Terminal ausführen:</p>
+</div>
+
+{% highlight sh %}
+gem 'therubyracer'
+{% endhighlight %}
+
+<hr />
 
 ## OS X
 

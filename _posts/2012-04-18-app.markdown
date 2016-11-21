@@ -85,21 +85,12 @@ cd railsgirls
 {% endhighlight %}
 
     <div>
-<p>Wenn Du nun in diesem Verzeichnis <code>ls</code> aufrufst, siehst Du Verzeichnisse wie <code>app</code> und <code>config</code>.</p>
-
-<p>Wenn du Codenvy benutzt, oder den Fehler "Gem Load Error is: Could not find a JavaScript runtime" erhältst, musst du folgendes in die zweite Zeile der Datei `Gemfile` eintragen und anschließend den Befehl "bundle" im Terminal ausführen:</p>
-</div>
-
-{% highlight sh %}
-gem 'therubyracer'
-{% endhighlight %}
-
-<p>Nun kannst Du kannst den Railsserver wie folgt starten</p>
+<p>Wenn Du nun in diesem Verzeichnis <code>ls</code> aufrufst, siehst Du Verzeichnisse wie <code>app</code> und <code>config</code>. Du kannst den Railsserver wie folgt starten: </p>
 
 {% highlight sh %}
 bundle exec rails server
 {% endhighlight %}
-  
+
 </div>
 
 <div class="win">
