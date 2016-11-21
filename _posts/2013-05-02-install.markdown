@@ -49,6 +49,7 @@ In der "New Workspace" Ansicht müssen nun ein paar Einstellungen vorgenommen we
 5. Gib dem Workspace nun einen Namen Deiner Wahl. Im Beispiel ist dies "rails-girls-app"
 6. Unter "Template", wähle "web-rails-simple" aus
 7. Nun können wir auf "Create" klicken, um den Workspace zu erstellen (es dauert einen Moment, bis der Vorgang fertig ist)
+8. Codeenvy legt beim Initialisieren einen Ordner /projects an, in dem Du später Deinen eigenen Code ablegen kannst. Außerdem wird ein Rails-Projekt angelegt, das wir jedoch nicht benötigen. Du siehst es unter dem Punkt Project Explorer. Ingnoriere es oder lösche es per Rechtsklick auf den Ordner.
 
 ![](/images/install/create-workspace.jpg)
 
