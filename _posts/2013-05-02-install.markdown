@@ -9,18 +9,17 @@ permalink: install
 
 Um Anwendungen und andere Dinge mit Ruby on Rails zu bauen, müssen wir zuerst etwas Software und eine Entwicklungsumgebung einrichten. Folge den Anleitungen für Dein Betriebssystem. Falls dabei Probleme auftreten sollten, keine Sorge, gib uns einfach bei der Veranstaltung Bescheid und wir lösen sie gemeinsam.
 
-* [Einen Cloud-Dienst verwenden - Keine Installation notwendig (empfohlen)](#cloud-dienst)
 * [OS X](#os-x)
 * [Windows](#windows)
 * [Linux](#linux)
 * [Alternative Installation für alle Betriebssysteme](#virtuelle-maschine)
+* [Einen Cloud-Dienst verwenden - Keine Installation notwendig](#cloud-dienst)
 
 <hr />
 
 ## Cloud-Dienst
 
-Anstatt Ruby on Rails und einen Texteditor auf Deinem Computer zu installieren, kannst Du zum Entwickeln auch einen Cloud-Dienst verwenden. Alles was Du brauchst ist ein Browser und eine Internetverbindung. Diese Anleitung beschreibt, wie Du den Cloud-Dienst [codenvy.io](https://codenvy.io) einrichtest. Wenn du dich für einen anderen Cloud-Dienst entschieden hast musst du wahrscheinlich andere, wenn auch ähnliche Schritte befolgen. Konsultiere hierfür bitte die Anleitung des entsprechenden Anbieters. 
-
+Anstatt Ruby on Rails und einen Texteditor auf Deinem Computer zu installieren, kannst Du zum Entwickeln auch einen Cloud-Dienst verwenden. Alles was Du brauchst ist ein Browser und eine Internetverbindung. Diese Anleitung beschreibt, wie Du den Cloud-Dienst [codenvy.io](https://codenvy.io) einrichtest. Wenn du dich für einen anderen Cloud-Dienst entschieden hast musst du wahrscheinlich andere, wenn auch ähnliche Schritte befolgen. Konsultiere hierfür bitte die Anleitung des entsprechenden Anbieters.
 
 #### Schritt 1: Aktualisiere Deinen Browser
 
@@ -31,37 +30,37 @@ Wenn Du den Internet Explorer verwendest, empfehlen wir stattdessen die Installa
 
 Öffne [https://codenvy.io](https://codenvy.io) und registriere Dich kostenlos.
 
+
 ![](/images/install/create-account.jpg)
 
 
 #### Schritt 3: Richte eine einen "Workspace" für Ruby on Rails ein
 
-Ein Ruby on Rails Workspace ist ein Arbeitsbereich, in dem die Software welche wir für den Workshop benötigen bereits vorinstalliert ist. Um einen Workspace zu erstellen loggen wir uns bei [https://codenvy.io](codenvy.io) an, und klicken auf "Dashboard". Wenn noch kein anderer Workspace erstellt wurde wird direkt die "New Workspace" Ansicht gezeigt.
+Ein Ruby on Rails Workspace ist ein Arbeitsbereich, in dem die Software welche wir für den Workshop benötigen bereits vorinstalliert ist. Um einen Workspace zu erstellen loggen wir uns bei [https://codenvy.io](codenvy.io) ein, und klicken auf "Dashboard". Wenn noch kein anderer Workspace erstellt wurde wird direkt die "New Workspace" Ansicht gezeigt.
 
 ![](/images/install/create-workspace-dashboard.jpg)
 
-In der "New Workspace" Ansicht müssen nun ein paar Einstellungen vorgenommen werden. 
+In der "New Workspace" Ansicht müssen nun ein paar Einstellungen vorgenommen werden.
 
 1. "New from blank, template, or sample project" sollte bereits ausgewählt sein
-2. "Create new workspace from stack" muss ausgewählt werden.
+2. "Create new workspace from stack" muss ausgewählt werden
 3. Wähle nun "Stack library"
 4. Gib "BITNAMIRAILS" in das "Filter" Eingabefeld ein und drücke Enter
-5. Gib dem Workspace nun einen Namen deiner Wahl. Im Beispiel ist dies "rails-girls-app".
-6. Unter "Template", wähle "web-rails-simple" aus.
+5. Gib dem Workspace nun einen Namen Deiner Wahl. Im Beispiel ist dies "rails-girls-app"
+6. Unter "Template", wähle "web-rails-simple" aus
 7. Nun können wir auf "Create" klicken, um den Workspace zu erstellen (es dauert einen Moment, bis der Vorgang fertig ist)
 
 ![](/images/install/create-workspace.jpg)
 
-
 #### Schritt 4: Finde Deine Entwicklungsbox und starte sie
 
-* Falls Du Dein Projekt soeben neu angelegt hast, kannst Du diese Schritte überspringen, da sich dein Workspace direkt öffnet sobald er fertig erstellt ist - Du brauchst sie aber ggf., wenn Du Dich später erneut bei Codenvy einloggst
-* Falls Du dein Workspace oder Deine Projekte eine Weile nicht verwendet hast, wurden sie unter Umständen heruntergefahren. Dies macht sich dadurch bemerkbar, dass neben dem Workspace Namen ein leerer Kreis angezeigt wird.
+* Falls Du Dein Projekt soeben neu angelegt hast, kannst Du diese Schritte überspringen, da sich Dein Workspace direkt öffnet sobald er fertig erstellt ist. Du brauchst sie aber ggf., wenn Du Dich später erneut bei Codenvy einloggst
+* Falls Du Deinen Workspace oder Deine Projekte eine Weile nicht verwendet hast, wurden sie unter Umständen heruntergefahren. Dies macht sich dadurch bemerkbar, dass neben dem Workspace Namen ein leerer Kreis angezeigt wird.
 
 ![](/images/install/start-workspace.jpg)
 
-* Klicke in diesem Fall einfach auf den Workspace Namen. Dieser wird nun erneut gestartet (was einen Moment dauern kann) und anschließend geöffnet.
-* Wenn ein du einen Workspace neu gestartet hast, musst du im Verzeichnis deines Rails-Projektes erneut den `bundle` Befehl ausführen (wie und wann dieser Befehl ausgeführt werden muss erfährst du im App Tutorial)
+* Klicke in diesem Fall einfach auf den Name des Workspace. Dieser wird nun erneut gestartet (was einen Moment dauern kann) und anschließend geöffnet.
+* Wenn ein Du einen Workspace neu gestartet hast, musst du im Verzeichnis Deines Rails-Projektes erneut den `bundle` Befehl ausführen (wie und wann dieser Befehl ausgeführt werden muss erfährst du im App Tutorial)
 
 
 #### Schritt 5: Mit der Entwicklungsbox programmieren
@@ -72,11 +71,13 @@ In der "New Workspace" Ansicht müssen nun ein paar Einstellungen vorgenommen we
 * Alles was Du brauchst befindet sich im Browser - Du musst nirgendwo sonst einen Texteditor oder ein Terminal starten
 * Wenn Du ein Tutorial oder eine Anleitung befolgst, verwende die Befehle für Linux, selbst wenn Du einen Windowscomputer benutzt - Dein Betriebssystem spielt keine Rolle, da die Befehle in Deinem Codenvy Projekt ausgeführt werden, und dort läuft Linux
 * Wenn eine Anleitung oder ein Tutorial Dich auffordern, mit 'rails server' oder 'rails s' den rails server zu starten, hänge an das Kommando '-b 0.0.0.0' an, so dass Du z.B. 'rails server -b 0.0.0.0' ausführst
+* Wenn das Tutorial Dich auffordert ein Rails-Kommando, das `rails`, `rake` oder `bundle` enthält in das Terminal einzugeben, stelle dem Kommando ein `bundle exec` voran, also z. Bsp. `bundle exec rails:db:migrate`.
 * Wenn eine Anleitung oder ein Tutorial Dich auffordern, im Browser etwas wie http://localhost:3000 zu öffnen, dann befolge stattdessen folgende Anleitung:
-    * Öffne in Codenvy die "Operations perspective" (1), gehe dort auf den "Servers" tab (2) und merke dir dort den URL Eintrag in der Zeile die mit "rails" beginnt (siehe Screenshot). Rufe statt http://localhost:3000 diese URL in deine, Browser auf.
-    ![](/images/install/get-workspace-ip.jpg)
-* Falls Du z.B. http://localhost:3000/posts aufrufem sollst, hänge '/posts' and die soebene erfahrene URL
-
+  * Du kannst in Codenvy zwischen deiner Arbeitsansicht und der "Operations perspective" wechseln, in dem du oben rechts auf das </> oder das Container-Symbol klickst.
+  * Öffne in Codenvy die "Operations perspective" (1), gehe dort auf den "Servers" tab (2) und merke dir dort den URL Eintrag in der Zeile die mit "rails" beginnt (siehe Screenshot). Rufe statt http://localhost:3000 diese URL in deine, Browser auf.
+  ![](/images/install/get-workspace-ip.jpg)
+  * Öffne in Codenvy die "Operations perspective", gehe dort auf den "Servers" Tab und merke dir dort den "Server Adress" Eintrag in der Zeile "Server-3000-tcp". Rufe statt http://localhost:3000 diese URL in Deinem Browser auf.
+  * Falls Du z.B. http://localhost:3000/posts aufrufen sollst, hänge '/posts' and die soebene erfahrene URL
 
 #### Troubleshooting
 
@@ -99,7 +100,6 @@ Die Installationsanleitung für OS X ist derzeit noch nicht auf Deutsch verfügb
 ## Windows
 
 Die Installationsanleitung für Windows ist derzeit noch nicht auf Deutsch verfügbar. Die englische Anleitung findest du [hier](http://guides.railsgirls.com/install#setup-for-windows).
-
 
 
 <hr />
