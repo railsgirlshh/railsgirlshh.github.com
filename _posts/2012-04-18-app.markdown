@@ -39,9 +39,9 @@ permalink: app
 
 ### Wichtig
 
-Befolge jeweils die Anleitungen für Dein Betriebssystem. Die Befehle für Windows unterscheiden sich von denen für Mac oder Linux. Solltest Du Probleme haben, überprüfe den Betriebssystemumschalter unterhalb der Befehle. Falls Du einen Cloudservice wie z.B. nitrous verwendest, so solltest Du die Linuxbefehle verwenden, auch wenn Du einen Windowscomputer benutzt.
+Befolge jeweils die Anleitungen für Dein Betriebssystem. Die Befehle für Windows unterscheiden sich von denen für Mac oder Linux. Solltest Du Probleme haben, überprüfe den Betriebssystemumschalter unterhalb der Befehle. Falls Du einen Cloudservice wie z.B. Codenvy verwendest, so solltest Du die Linuxbefehle verwenden, auch wenn Du einen Windowscomputer benutzt.
 
-## *1.*Eine neue Anwendung erzeugen
+## *1.* Eine neue Anwendung erzeugen
 
 Wir erzeugen nun eine neue Railsanwendung namens *railsgirls*.
 
@@ -50,7 +50,7 @@ Dazu öffnen wir das Terminal:
 * Mac OS X: Öffne Spotlight, tippe *Terminal* ein und klick die Anwendung *Terminal* an.
 * Windows: Klick auf Start und halte nach *Eingabeaufforderung* Ausschau, dann klick *Eingabeaufforderung mit Ruby on Rails* bzw. *Command Prompt with Ruby on Rails* an.
 * Linux (Ubuntu/Fedora): Suche im Dash nach *Terminal* und klick *Terminal* an.
-* Cloudservice (z.B. nitrous): Melde Dich an Deinem Account an, starte Dein Projekt und wechsel in die Entwicklungsumgebung IDE (siehe [Installationsanleitung](/install#using-a-cloud-service)). Das Terminal befindet sich normalerweise im unteren Bereich des Browserfensters.
+* Cloudservice (z.B. Codenvy): Melde Dich an Deinem Account an, starte Dein Projekt und wechsel in die Entwicklungsumgebung IDE (siehe [Installationsanleitung](/install#using-a-cloud-service)). Das Terminal befindet sich normalerweise im unteren Bereich des Browserfensters.
 
 Gib jetzt folgende Befehle in das Terminal ein:
 
@@ -85,15 +85,15 @@ cd railsgirls
 {% endhighlight %}
 
     <div>
-<p>Wenn Du nun in diesem Verzeichnis <code>ls</code> aufrufst, siehst Du Verzeichnisse wie <code>app</code> und <code>config</code>. Du kannst den Railsserver wie folgt starten:</p>
-    </div>
+<p>Wenn Du nun in diesem Verzeichnis <code>ls</code> aufrufst, siehst Du Verzeichnisse wie <code>app</code> und <code>config</code>. Du kannst den Railsserver wie folgt starten: </p>
 
 {% highlight sh %}
-rails server
+bundle exec rails server
 {% endhighlight %}
-  </div>
 
-  <div class="win">
+</div>
+
+<div class="win">
 {% highlight sh %}
 mkdir projects
 {% endhighlight %}
@@ -132,7 +132,7 @@ rails server
   </div>
 </div>
 
-Öffne nun <http://localhost:3000> in Deinem Browser. Wenn Du einen Cloudservice benutzt (z.B. nitrous), verwende stattdessen die Vorschaufunktion (siehe [Installationsanleitung](/install#using-a-cloud-service)).
+Öffne nun <http://localhost:3000> in Deinem Browser. Wenn Du einen Cloudservice benutzt (z.B. Codenvy), verwende stattdessen die URL aus der [Installationsanleitung](/install#using-a-cloud-service).
 
 Wenn die Erzeugung Deiner neuen Anwendung korrekt funktioniert hat, siehst du nun eine "Welcome aboard" Seite.
 
@@ -164,17 +164,17 @@ Wie benutzen die Scaffold-Funktion von Rails, um einen ersten Baustein für unse
 **Coach:** Was ist Rails Scaffolding? (Erläutere den Befehl, den Namen des Models und der entsprechenden Datenbanktabelle, Namenskonventionen, Attribute und Typen, usw.) Was sind Migrationen, und wofür brauchen wir sie?
 
 {% highlight sh %}
-rails generate scaffold idea name:string description:text picture:string
+bundle exec rails generate scaffold idea name:string description:text picture:string
 {% endhighlight %}
 
 Der Scaffold erzeugt neue Dateien in Deinem Projektverzeichnis, aber damit alles korrekt funktioniert, ist die Ausführung weiterer Befehle erforderlich - um die Datenbank zu aktualisieren und den Railsserver neu zu starten.
 
 {% highlight sh %}
-rake db:migrate
-rails server
+bundle exec rake db:migrate
+bundle exec rails server
 {% endhighlight %}
 
-Öffne <http://localhost:3000/ideas> in Deinem Browser. Wenn Du einen Cloudservice (z.B. nitrous) verwendest, hänge stattdessen '/ideas' an die Vorschau-URL an (siehe [Installationsanleitung](/install#using-a-cloud-service)).
+Öffne <http://localhost:3000/ideas> in Deinem Browser. Wenn Du einen Cloudservice (z.B. Codenvy) verwendest, hänge stattdessen '/ideas' an die Vorschau-URL an (siehe [Installationsanleitung](/install#using-a-cloud-service)).
 
 Klick ein wenig herum, um Deine Anwendung zu testen.
 
@@ -290,7 +290,7 @@ bundle
 Jetzt können wir den Code zum Hochladen von Dateien erzeugen. Führe folgendes im Terminal aus:
 
 {% highlight sh %}
-rails generate uploader Picture
+bundle exec rails generate uploader Picture
 {% endhighlight %}
 
 Bitte starte nun den Railsserver.
@@ -376,7 +376,7 @@ Teste die Änderungen, in dem Du  <http://localhost:3000/> bzw. Deine Vorschau-U
 Lass uns eine statische Seite anlegen, die Informationen über die Verfasserin der Anwendung bereitstellt - also über Dich!
 
 {% highlight sh %}
-rails generate controller pages info
+bundle exec rails generate controller pages info
 {% endhighlight %}
 
 Dieser Befehl legt ein neues Verzeichnis unterhalb von `app/views` an. In dem neuen Verzeichnis namens `/pages` wird eine neue Datei `info.html.erb` angelegt, aus der nun Deine Infoseite wird.

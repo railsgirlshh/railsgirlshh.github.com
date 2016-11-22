@@ -7,344 +7,110 @@ permalink: install
 # Installationsanleitung für Rails Girls
 <span class="muted">Dauer: 5min aktiv / 15-30min passiv</span>
 
-Um Anwendungen und andere Dinge mit Ruby on Rails zu bauen, müssen wir zuerst etwas Software und eine Entwicklungsumgebung einrichten.
-
-Folge den Anleitungen für Dein Betriebssystem. Falls dabei Probleme auftreten sollten, keine Sorge, gib uns einfach bei der Veranstaltung Bescheid und wir lösen sie gemeinsam.
+Um Anwendungen und andere Dinge mit Ruby on Rails zu bauen, müssen wir zuerst etwas Software und eine Entwicklungsumgebung einrichten. Folge den Anleitungen für Dein Betriebssystem. Falls dabei Probleme auftreten sollten, keine Sorge, gib uns einfach bei der Veranstaltung Bescheid und wir lösen sie gemeinsam.
 
 * [OS X](#os-x)
 * [Windows](#windows)
 * [Linux](#linux)
 * [Alternative Installation für alle Betriebssysteme](#virtuelle-maschine)
-* [Einen Cloudservice verwenden - Keine Installation notwendig](#cloudservice)
+* [Einen Cloud-Dienst verwenden - Keine Installation notwendig](#cloud-dienst)
 
 <hr />
 
+## Cloud-Dienst
+
+Anstatt Ruby on Rails und einen Texteditor auf Deinem Computer zu installieren, kannst Du zum Entwickeln auch einen Cloud-Dienst verwenden. Alles was Du brauchst ist ein Browser und eine Internetverbindung. Diese Anleitung beschreibt, wie Du den Cloud-Dienst [codenvy.io](https://codenvy.io) einrichtest. Wenn du dich für einen anderen Cloud-Dienst entschieden hast musst du wahrscheinlich andere, wenn auch ähnliche Schritte befolgen. Konsultiere hierfür bitte die Anleitung des entsprechenden Anbieters.
+
+#### Schritt 1: Aktualisiere Deinen Browser
+
+Wenn Du den Internet Explorer verwendest, empfehlen wir stattdessen die Installation von [Firefox](https://mozilla.org/firefox) oder [Google Chrome](https://google.com/chrome). Öffne [whatbrowser.org](https://whatbrowser.org) und aktualisiere Deinen Browser, falls Du nicht die neueste Version hast.
+
+
+#### Schritt 2: Lege einen kostenlosen Account an
+
+Öffne [https://codenvy.io](https://codenvy.io) und registriere Dich kostenlos.
+
+
+![](/images/install/create-account.jpg)
+
+
+#### Schritt 3: Richte eine einen "Workspace" für Ruby on Rails ein
+
+Ein Ruby on Rails Workspace ist ein Arbeitsbereich, in dem die Software welche wir für den Workshop benötigen bereits vorinstalliert ist. Um einen Workspace zu erstellen loggen wir uns bei [https://codenvy.io](codenvy.io) ein, und klicken auf "Dashboard". Wenn noch kein anderer Workspace erstellt wurde wird direkt die "New Workspace" Ansicht gezeigt.
+
+![](/images/install/create-workspace-dashboard.jpg)
+
+In der "New Workspace" Ansicht müssen nun ein paar Einstellungen vorgenommen werden.
+
+1. "New from blank, template, or sample project" sollte bereits ausgewählt sein
+2. "Create new workspace from stack" muss ausgewählt werden
+3. Wähle nun "Stack library"
+4. Gib "BITNAMIRAILS" in das "Filter" Eingabefeld ein und drücke Enter
+5. Gib dem Workspace nun einen Namen Deiner Wahl. Im Beispiel ist dies "rails-girls-app"
+6. Unter "Template", wähle "web-rails-simple" aus
+7. Nun können wir auf "Create" klicken, um den Workspace zu erstellen (es dauert einen Moment, bis der Vorgang fertig ist)
+8. Codeenvy legt beim Initialisieren einen Ordner /projects an, in dem Du später Deinen eigenen Code ablegen kannst. Außerdem wird ein Rails-Projekt angelegt, das wir jedoch nicht benötigen. Du siehst es unter dem Punkt Project Explorer. Ingnoriere es oder lösche es per Rechtsklick auf den Ordner.
+
+![](/images/install/create-workspace.jpg)
+
+#### Schritt 4: Finde Deine Entwicklungsbox und starte sie
+
+* Falls Du Dein Projekt soeben neu angelegt hast, kannst Du diese Schritte überspringen, da sich Dein Workspace direkt öffnet sobald er fertig erstellt ist. Du brauchst sie aber ggf., wenn Du Dich später erneut bei Codenvy einloggst
+* Falls Du Deinen Workspace oder Deine Projekte eine Weile nicht verwendet hast, wurden sie unter Umständen heruntergefahren. Dies macht sich dadurch bemerkbar, dass neben dem Workspace Namen ein leerer Kreis angezeigt wird.
+
+![](/images/install/start-workspace.jpg)
+
+* Klicke in diesem Fall einfach auf den Name des Workspace. Dieser wird nun erneut gestartet (was einen Moment dauern kann) und anschließend geöffnet.
+* Wenn ein Du einen Workspace neu gestartet hast, musst du im Verzeichnis Deines Rails-Projektes erneut den `bundle` Befehl ausführen (wie und wann dieser Befehl ausgeführt werden muss erfährst du im App Tutorial)
+
+
+#### Schritt 5: Mit der Entwicklungsbox programmieren
+
+* Auf der linken Seite hast Du einen Dateibrowser, dort kannst Du durch Deine Verzeichnisse und Dateien navigieren
+* In der Mitte ist der Texteditor, mit dem Du Deine Dateien verändern kannst
+* Unten findest Du das Terminal, in dem Du Befehle ausführen kannst
+* Alles was Du brauchst befindet sich im Browser - Du musst nirgendwo sonst einen Texteditor oder ein Terminal starten
+* Wenn Du ein Tutorial oder eine Anleitung befolgst, verwende die Befehle für Linux, selbst wenn Du einen Windowscomputer benutzt - Dein Betriebssystem spielt keine Rolle, da die Befehle in Deinem Codenvy Projekt ausgeführt werden, und dort läuft Linux
+* Wenn eine Anleitung oder ein Tutorial Dich auffordern, mit 'rails server' oder 'rails s' den rails server zu starten, hänge an das Kommando '-b 0.0.0.0' an, so dass Du z.B. 'rails server -b 0.0.0.0' ausführst
+* Wenn das Tutorial Dich auffordert ein Rails-Kommando, das `rails`, `rake` oder `bundle` enthält in das Terminal einzugeben, stelle dem Kommando ein `bundle exec` voran, also z. Bsp. `bundle exec rails:db:migrate`.
+* Wenn eine Anleitung oder ein Tutorial Dich auffordern, im Browser etwas wie http://localhost:3000 zu öffnen, dann befolge stattdessen folgende Anleitung:
+  * Öffne in Codenvy die "Operations perspective" (1), gehe dort auf den "Servers" tab (2) und merke dir dort den URL Eintrag in der Zeile die mit "rails" beginnt (siehe Screenshot). Rufe statt http://localhost:3000 diese URL in deine, Browser auf.
+  ![](/images/install/get-workspace-ip.jpg)
+  * Falls Du z.B. http://localhost:3000/posts aufrufen sollst, hänge '/posts' and die soebene erfahrene URL
+
+#### Troubleshooting
+
+<p>Wenn Du den Fehler "Gem Load Error is: Could not find a JavaScript runtime" erhältst, musst Du folgendes in die zweite Zeile der Datei `Gemfile` eintragen und anschließend den Befehl "bundle" im Terminal ausführen:</p>
+</div>
+
+{% highlight sh %}
+gem 'therubyracer'
+{% endhighlight %}
+
+<hr />
+
+
 ## OS X
 
-Die Installationsanleitung für OS X ist derzeit noch nicht auf Deutsch verfügbar.
-
-### *1.* Let&#8217;s check the version of the operating system.
-
-Click the Apple menu and choose *About this Mac*.
-
-![Apple menu](/images/1.png "Apple menu")
-
-### *2.* In the window you will find the version of your operating system.
-If your version number starts with 10.6, 10.7, 10.8, 10.9, 10.10 or 10.11 this guide is for you. If it&#8217;s something else, we can setup your machine at the event.
-
-![About this Mac dialog](/images/2.png "About this Mac dialog")
-
-### *3a.* If your OS X version is 10.9 or higher:
-
-If your version number starts with 10.9, 10.10 or 10.11, follow these steps. We are installing homebrew and rbenv.
-
-#### *3a1.* Install Command line tools on terminal:
-
-{% highlight sh %}
-xcode-select --install
-{% endhighlight %}
-
-#### *3a2.* Install [Homebrew](http://brew.sh/):
-
-{% highlight sh %}
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-{% endhighlight %}
-
-#### *3a3.* Install [rbenv](https://github.com/sstephenson/rbenv):
-
-{% highlight sh %}
-brew update
-brew install rbenv ruby-build
-echo 'eval "$(rbenv init -)"' >> ~/.bash_profile
-echo 'export PATH="$HOME/.rbenv/shims:$PATH"' >> ~/.bash_profile
-source ~/.bash_profile
-{% endhighlight %}
-
-#### *3a4.* Build Ruby with rbenv:
-
-You can find the newest version of Ruby with the command "rbenv install -l".
-
-{% highlight sh %}
-rbenv install 2.3.1
-{% endhighlight %}
-
-If you got "OpenSSL::SSL::SSLError: ... : certificate verify failed" error, try it this way.
-
-{% highlight sh %}
-brew install curl-ca-bundle
-cp /usr/local/opt/curl-ca-bundle/share/ca-bundle.crt `ruby -ropenssl -e 'puts OpenSSL::X509::DEFAULT_CERT_FILE'`
-{% endhighlight %}
-
-#### *3a5.* Set default Ruby:
-
-{% highlight sh %}
-rbenv global 2.3.1
-{% endhighlight %}
-
-#### *3a6.* Install rails:
-
-{% highlight sh %}
-gem install rails --no-document
-{% endhighlight %}
-
-### *3b.* If your OS X version is 10.6, 10.7, or 10.8:
-Download the RailsInstaller for your version of OS X:
-
-* [RailsInstaller for 10.7 and 10.8](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.7.app.tgz) <span class="muted">(325MB)</span>
-* [RailsInstaller for 10.6](http://railsinstaller.s3.amazonaws.com/RailsInstaller-1.0.4-osx-10.6.app.tgz) <span class="muted">(224MB)</span>
-
-Double click the downloaded file and it will unpack it into the current directory. Double click the the newly unpacked 'RailsInstaller-1.0.4-osx-10.7.app' or 'RailsInstaller-1.0.4-osx-10.6.app' and follow the instructions. It will open a README file with 'Rails Installer OS X' at the top. Please **ignore** the instructions in this file.
-
-If the Rails version wasn't the latest, you could update it using a following command on terminal.
-
-{% highlight sh %}
-gem update rails --no-document
-{% endhighlight %}
-
-Make sure that all works well by running the application generator command.
-
-{% highlight sh %}
-rails new myapp
-{% endhighlight %}
-
-### *4.* Install a text editor to edit code files
-
-For the workshop we recommend the text editor Atom.
-
-* [Download Atom and install it](https://atom.io/)
-
-If you are using Mac OS X 10.7 or older versions, you can use another editor [Sublime Text 2](http://www.sublimetext.com/2).
-
-### *5.* Update your browser
-
-Open [whatbrowser.org](http://whatbrowser.org) and update your browser if you don't have the latest version.
-
-
-Now you should have a working Ruby on Rails programming setup. Congrats!
+Die Installationsanleitung für OS X ist derzeit noch nicht auf Deutsch verfügbar. Die englische Anleitung findest du [hier](http://guides.railsgirls.com/install#setup-for-os-x).
 
 <hr />
 
 ## Windows
 
-Die Installationsanleitung für Windows ist derzeit noch nicht auf Deutsch verfügbar.
+Die Installationsanleitung für Windows ist derzeit noch nicht auf Deutsch verfügbar. Die englische Anleitung findest du [hier](http://guides.railsgirls.com/install#setup-for-windows).
 
-### *1.* Install Rails
-
-Download [RailsInstaller](https://s3.amazonaws.com/railsinstaller/Windows/railsinstaller-3.2.0.exe) and run it. Click through the installer using the default options.
-
-Open `Command Prompt with Ruby and Rails` and run the following commands to solve a problem in RailsInstaller3.2.0.
-
-**Coach:** There is a bug that occurs "No such file or directory" error when using the `rails` command in RailsInstaller3.2.0. This is occured by problem with incorrect paths in `rails.bat` and `bundle.bat`. We can fix the problem copying `rake.bat` to `rails.bat` and `bundle.bat`. ([github issue page](https://github.com/railsinstaller/railsinstaller-windows/issues/76))
-
-{% highlight sh %}
-cd C:\RailsInstaller\Ruby2.2.0\bin
-copy rake.bat rails.bat
-copy rake.bat bundle.bat
-{% endhighlight %}
-
-Open `Command Prompt with Ruby and Rails` and run the following command:
-
-{% highlight sh %}
-rails -v
-{% endhighlight %}
-
-If the Rails version is less than 5, update it using a following command:
-
-{% highlight sh %}
-gem update rails --no-document
-{% endhighlight %}
-
-## Possible errors
-
-### Gem::RemoteFetcher error
-
-If you get this error when running `rails new railsgirls` or `gem update rails`:
-
-{% highlight sh %}
-Gem::RemoteFetcher::FetchError: SSL_connect returned=1 errno=0 state=SSLv3 read
-server certificate B: certificate verify failed (https://rubygems.org/gems/i18n-
-0.6.11.gem)
-{% endhighlight %}
-
-This means you have an older version of Rubygems and will need to update it manually first verify your Rubygems version
-
-{% highlight sh %}
-gem -v
-{% endhighlight %}
-
-If it is lower than `2.2.3` you will need to manually update it:
-
-
-First download the [ruby-gems-update gem](https://rubygems.org/gems/rubygems-update-2.6.7.gem). Move the file to `c:\\rubygems-update-2.6.7.gem` then run:
-
-{% highlight sh %}
-gem install --local c:\\rubygems-update-2.6.7.gem
-update_rubygems --no-document
-gem uninstall rubygems-update -x
-{% endhighlight %}
-
-Check your version of rubygems
-
-{% highlight sh %}
-gem -v
-{% endhighlight %}
-
-Make sure it is equal or higher than `2.6.7`. Re-run the command that was failing previously.
-
-If you are still running into problems you can always find the latest version of rubygems online at [rubygems.org](https://rubygems.org/pages/download). If you click on **GEM** you will get the latest version.
-
-### During bundle install
-
-The `Gem::RemoteFetcher::FetchError: SSL_connect` can also occur during the `bundle install` stage when creating a new rails app.
-
-The error will make mention of [bit.ly/ruby-ssl](http://bit.ly/ruby-ssl). What is relevant for Windows users at this point is [this GitHub gist](https://gist.github.com/867550). The described manual way has proven to be succesful to solve the `bundle install` error.
-
-### 'x64_mingw' is not a valid platform` Error
-
-Sometimes you get the following error when running `rails server`:
-`'x64_mingw' is not a valid platform` If you experience this error after using the RailsInstaller you have to do a small edit to the file `Gemfile`:
-
-Look at the bottom of the file. You will probably see something like this as one of the last lines in the file:
-`gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]`. If you have this line with `:x64_mingw`, then please delete the `:x64_mingw` part. In the end it should just say:
-`'tzinfo-data', platforms: [:mingw, :mswin]`
-
-After you did that, please use your Command Prompt again and type `bundle update`.
-
-### *2.* Install a text editor to edit code files
-
-For the workshop we recommend the text editor Atom.
-
-* [Download Atom and install it](https://github.com/atom/atom/releases/latest)
-  * Download an atom zip file for windows and decompress it.
-  * Copy the folder into your Program Files.
-  * Launch atom in the folder.
-
-If you are using Windows Vista or older versions, you can use another editor [Sublime Text 2](http://www.sublimetext.com/2).
-
-### *3.* Update your browser
-
-If you use Internet Explorer, we recommend installing [Firefox](mozilla.org/firefox) or [Google Chrome](google.com/chrome).
-
-Open [whatbrowser.org](http://whatbrowser.org) and update your browser if you don't have the latest version.
-
-### *4.* Install node
-
-This is not strictly necessary, but it avoids a problem with and `ExecJS::RuntimeError` that might
-occur later  ([see stackoverflow](https://stackoverflow.com/questions/12520456/execjsruntimeerror-on-windows-trying-to-follow-rubytutorial)).
-
-* Go to [https://nodejs.org/](https://nodejs.org/) and install node LTS package
-* Reopen your Rails Command Shell
-
-Check your version of node
-
-{% highlight sh %}
-node --version
-{% endhighlight %}
-
-Make sure it is displaying version number.
-
-### *5.* Check the environment
-
-Check that everything is working by running the application generator command.
-
-{% highlight sh %}
-rails new myapp
-cd myapp
-rails server
-{% endhighlight %}
-
-Go to `http://localhost:3000` in your browser, and you should see the 'Yay! You're on Rails!' page.
-
-Now you should have a working Ruby on Rails programming setup. Congrats!
-
-**Coach:** We recommend to verify by using the scaffold command and inputting data with the generated page with coaches to ensure everything is working.
 
 <hr />
 
 ## Linux
 
-Die Installationsanleitung für Linux ist derzeit noch nicht auf Deutsch verfügbar.
-
-### *1.* Install Rails
+Die Installationsanleitung für Linux ist derzeit noch nicht auf Deutsch verfügbar. Die englische Anleitung findest du [hier](http://guides.railsgirls.com/install#setup-for-linux).
 
 
-To install the Ruby on Rails development environment you just need to copy the line below for your Linux distribution (Ubuntu or Fedora), paste it in the Terminal and press Enter. Enjoy the text flying on the screen; it will take quite some time. Grabbing a refreshing drink before starting is encouraged.
-
-#### For Ubuntu:
-
-{% highlight sh %}
-sudo apt-get install curl
-bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-ubuntu.sh)
-{% endhighlight %}
-
-If you are going to use RVM installations with gnome-terminal, you'll probably need to change it's default options before you can see and use the right Ruby and Rails versions. Find out how: [RVM documentation](http://rvm.io/integration/gnome-terminal).
-
-#### For Fedora:
-
-{% highlight sh %}
-bash < <(curl -sL https://raw.github.com/railsgirls/installation-scripts/master/rails-install-fedora.sh)
-{% endhighlight %}
-
-Make sure that all works well by running the application generator command.
-
-{% highlight sh %}
-rails new myapp
-{% endhighlight %}
-
-
-### *2.* Install a text editor to edit code files
-
-For the workshop we recommend the text editor Sublime Text.
-
-* [Download Sublime Text and install it](http://www.sublimetext.com/2)
-
-
-### *3.* Update your browser
-
-Open [whatbrowser.org](http://whatbrowser.org) and update your browser if you don't have the latest version.
-
-
-Now you should have a working Ruby on Rails programming setup. Congrats!
 
 <hr />
 
 ## Virtuelle Maschine
 
 Anstatt alles direkt auf Deinem Rechner zu installieren, kannst Du auch eine Entwicklungsumgebung in einer virtuellen Maschine einrichten. Details dazu findest du [hier]({% post_url 2014-03-24-alternative-dev-environment %}) (auf Englisch).
-
-<hr />
-
-## Cloudservice
-
-Anstatt Ruby on Rails und einen Texteditor auf Deinem Computer zu installieren, kannst Du zum Entwickeln auch einen Webdienst / Cloudservice verwenden. Alles was Du brauchst ist ein Browser und eine Internetverbindung. Diese Anleitung beschreibt, wie Du den Cloudservice [nitrous.io](https://nitrous.io) einrichtest. Wenn Du einen anderen Cloudservice benutzt, werden dort unter Umständen andere Begriffe verwendet, aber der generelle Ablauf ist normalerweise ähnlich.
-
-### *1.* Aktualisiere Deinen Browser
-Wenn Du den Internet Explorer verwendest, empfehlen wir stattdessen die Installation von [Firefox](mozilla.org/firefox) oder [Google Chrome](google.com/chrome).
-
-Öffne [whatbrowser.org](http://whatbrowser.org) und aktualisiere Deinen Browser, falls Du nicht die neueste Version hast.
-
-### *2.* Lege einen kostenlosen Account an
-Gehe zu [https://nitrous.io](https://nitrous.io/) und registriere Dich kostenlos ('Sign Up for Free').
-
-### *3.* Richte eine Entwicklungsbox / einen Workspace für Ruby on Rails ein
-* Melde Dich an Deinem nitrous Account an
-* Du wirst aufgefordert, eine workstation anzulegen - nimm die kostenlose
-* Lege ein nitrous Projekt an: wähle Ruby/Rails als Template aus, alles andere kann so bleiben - Du kannst den Namen Deines Projektes ändern, wenn Du möchtest
-* Es dauert einen Moment, bis Dein Projekt fertig ist
-
-### *4.* Finde Deine Entwicklungsbox und starte sie neu
-* Falls Du Dein Projekt soeben neu angelegt hast, kannst Du diese Schritte wahrscheinlich überspringen - Du brauchst sie aber ggf., wenn Du Dich später erneut bei nitrous einloggst
-* Falls Du Deine Workstation oder Deine Projekte eine Weile nicht verwendet hast, wurden sie unter Umständen heruntergefahren. Wenn Du nach dem Einloggen mitgeteile bekommst, dass Deine Workstation heruntergefahren wurde, starte sie mit dem 'Start Workstation' Button.
-* Du findest Deine nitrous Projekte unter dem Menupunkt dashboard im oberen Menu
-* Wähle Dein Projekt aus der Liste aus. Falls es heruntergefahren wurde, starte es mit dem Ein/Aus-Button
-* Wenn Dein Projekt gestartet wurde, wähle 'IDE' um mit dem Programmieren zu beginnen
-
-### *5.* Mit der Entwicklungsbox programmieren
-* Auf der linken Seite hast Du einen Dateibrowser, dort kannst Du durch Deine Verzeichnisse und Dateien navigieren
-* In der Mitte ist der Texteditor, mit dem Du Deine Dateien verändern kannst
-* Unten findest Du das Terminal, in dem Du Befehle ausführen kannst
-* Alles was Du brauchst befindet sich im Browser - Du musst nirgendwo sonst einen Texteditor oder ein Terminal starten
-* Wenn Du ein Tutorial oder eine Anleitung befolgst, verwende die Befehle für Linux, selbst wenn Du einen Windowscomputer benutzt - Dein Betriebssystem spielt keine Rolle, da die Befehle in Deinem nitrous Projekt ausgeführt werden, und dort läuft Linux
-* Wenn eine Anleitung oder ein Tutorial Dich auffordern, mit 'rails server' oder 'rails s' den rails server zu starten, hänge an das Kommando '-b 0.0.0.0' an, so dass Du z.B. 'rails server -b 0.0.0.0' ausführst
-* Wenn eine Anleitung oder ein Tutorial Dich auffordern, im Browser etwas wie http://localhost:3000 zu öffnen, gehe stattdessen ins 'Preview' Menu und wähle 'Port 3000 - HTTP'
-* Falls Du z.B. http://localhost:3000/posts aufrufem sollst, hänge '/posts' and die geöffnete Vorschau-URL an
