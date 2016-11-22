@@ -34,7 +34,7 @@ Wenn Du den Internet Explorer verwendest, empfehlen wir stattdessen die Installa
 ![](/images/install/create-account.jpg)
 
 
-#### Schritt 3: Richte eine einen "Workspace" für Ruby on Rails ein
+#### Schritt 3: Richte einen "Workspace" für Ruby on Rails ein
 
 Ein Ruby on Rails Workspace ist ein Arbeitsbereich, in dem die Software welche wir für den Workshop benötigen bereits vorinstalliert ist. Um einen Workspace zu erstellen loggen wir uns bei [https://codenvy.io](codenvy.io) ein, und klicken auf "Dashboard". Wenn noch kein anderer Workspace erstellt wurde wird direkt die "New Workspace" Ansicht gezeigt.
 
@@ -81,7 +81,6 @@ In der "New Workspace" Ansicht müssen nun ein paar Einstellungen vorgenommen we
 #### Troubleshooting
 
 <p>Wenn Du den Fehler "Gem Load Error is: Could not find a JavaScript runtime" erhältst, musst Du folgendes in die zweite Zeile der Datei `Gemfile` eintragen und anschließend den Befehl "bundle" im Terminal ausführen:</p>
-</div>
 
 {% highlight sh %}
 gem 'therubyracer'
