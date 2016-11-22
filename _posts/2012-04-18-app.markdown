@@ -84,8 +84,9 @@ rails new railsgirls
 cd railsgirls
 {% endhighlight %}
 
-    <div>
-<p>Wenn Du nun in diesem Verzeichnis <code>ls</code> aufrufst, siehst Du Verzeichnisse wie <code>app</code> und <code>config</code>. Du kannst den Railsserver wie folgt starten: </p>
+<div>
+  <p>Wenn Du nun in diesem Verzeichnis <code>ls</code> aufrufst, siehst Du Verzeichnisse wie <code>app</code> und <code>config</code>. Du kannst den Railsserver wie folgt starten: </p>
+</div>
 
 {% highlight sh %}
 bundle exec rails server
@@ -177,6 +178,7 @@ bundle exec rails server
 Öffne <http://localhost:3000/ideas> in Deinem Browser. Wenn Du einen Cloudservice (z.B. Codenvy) verwendest, hänge stattdessen '/ideas' an die Vorschau-URL an (siehe [Installationsanleitung](/install#using-a-cloud-service)).
 
 Klick ein wenig herum, um Deine Anwendung zu testen.
+
 
 ## *3.*Design
 
