@@ -44,12 +44,12 @@ In der "New Workspace" Ansicht müssen nun ein paar Einstellungen vorgenommen we
 
 1. "New from blank, template, or sample project" sollte bereits ausgewählt sein
 2. "Create new workspace from stack" muss ausgewählt werden
-3. Wähle nun "Stack library"
-4. Gib "BITNAMIRAILS" in das "Filter" Eingabefeld ein und drücke Enter
-5. Gib dem Workspace nun einen Namen Deiner Wahl. Im Beispiel ist dies "rails-girls-app"
-6. Unter "Template", wähle "web-rails-simple" aus
+3. Ready-to-go Stacks" sollte bereits ausgewählt sein. Wenn nicht, wähle es aus.
+4. Selektiere den "RAILS" stack
+5. Gib dem Workspace nun einen Namen Deiner Wahl. Im Beispiel ist dies "railsgirls"
 7. Nun können wir auf "Create" klicken, um den Workspace zu erstellen (es dauert einen Moment, bis der Vorgang fertig ist)
-8. Codeenvy legt beim Initialisieren einen Ordner /projects an, in dem Du später Deinen eigenen Code ablegen kannst. Außerdem wird ein Rails-Projekt angelegt, das wir jedoch nicht benötigen. Du siehst es unter dem Punkt Project Explorer. Ingnoriere es oder lösche es per Rechtsklick auf den Ordner.
+
+Codeenvy legt beim Initialisieren einen Ordner /projects an, in dem Du später Deinen eigenen Code ablegen kannst. Außerdem wird ein Ordner namens "console-ruby-simple" angelegt, der jedoch nur ein Beispiel ist und den wir jedoch nicht benötigen. Du siehst den Ordner unter dem Punkt Project Explorer. Ingnoriere es oder lösche es per Rechtsklick auf den Ordner.
 
 ![](/images/install/create-workspace.jpg)
 
@@ -71,20 +71,12 @@ In der "New Workspace" Ansicht müssen nun ein paar Einstellungen vorgenommen we
 * Unten findest Du das Terminal, in dem Du Befehle ausführen kannst
 * Alles was Du brauchst befindet sich im Browser - Du musst nirgendwo sonst einen Texteditor oder ein Terminal starten
 * Wenn Du ein Tutorial oder eine Anleitung befolgst, verwende die Befehle für Linux, selbst wenn Du einen Windowscomputer benutzt - Dein Betriebssystem spielt keine Rolle, da die Befehle in Deinem Codenvy Projekt ausgeführt werden, und dort läuft Linux
-* Wenn eine Anleitung oder ein Tutorial Dich auffordern, mit 'rails server' oder 'rails s' den rails server zu starten, hänge an das Kommando '-b 0.0.0.0' an, so dass Du z.B. 'rails server -b 0.0.0.0' ausführst
 * Wenn das Tutorial Dich auffordert ein Rails-Kommando, das `rails` oder `rake` enthält in das Terminal einzugeben, stelle dem Kommando ein `bundle exec` voran, also z. Bsp. `bundle exec rake db:migrate`.
-* Wenn eine Anleitung oder ein Tutorial Dich auffordern, im Browser etwas wie http://localhost:3000 zu öffnen, dann befolge stattdessen folgende Anleitung:
-  * Öffne in Codenvy die "Operations perspective" (1), gehe dort auf den "Servers" tab (2) und merke dir dort den URL Eintrag in der Zeile die mit "rails" beginnt (siehe Screenshot). Rufe statt http://localhost:3000 diese URL in deine, Browser auf.
+* Wenn eine Anleitung oder ein Tutorial Dich auffordern, mit `rails server` oder `rails s` den rails server zu starten, hänge an das Kommando `-b 0.0.0.0` an, so dass Du z.B. `bundle exec rails server -b 0.0.0.0` ausführst
+* Wenn eine Anleitung oder ein Tutorial Dich auffordern, im Browser etwas wie `http://localhost:3000` zu öffnen, dann befolge stattdessen folgende Anleitung:
+  * Öffne in Codenvy die "Operations perspective" (1), gehe dort auf den "Servers" tab (2) und merke dir dort den "Server Address" Eintrag in der Zeile die mit "Server-3000-tcp" beginnt (3). Rufe statt `http://localhost:3000` diese URL in deine, Browser auf.
   ![](/images/install/get-workspace-ip.jpg)
-  * Falls Du z.B. http://localhost:3000/posts aufrufen sollst, hänge '/posts' and die soebene erfahrene URL
-
-#### Troubleshooting
-
-<p>Wenn Du den Fehler "Gem Load Error is: Could not find a JavaScript runtime" erhältst, musst Du folgendes in die zweite Zeile der Datei `Gemfile` eintragen und anschließend den Befehl "bundle" im Terminal ausführen:</p>
-
-{% highlight sh %}
-gem 'therubyracer'
-{% endhighlight %}
+  * Falls Du z.B. `http://localhost:3000/posts` aufrufen sollst, hänge '/posts' and die soebene erfahrene URL
 
 <hr />
 
